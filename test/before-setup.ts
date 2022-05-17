@@ -140,6 +140,7 @@ before(async () => {
   ): Promise<ethers.Contract> {
     switch (contractType) {
       case Vote.contractType:
+      case SignatureDrop.contractType:
         return await contractFactory.deploy();
       case Marketplace.contractType:
         const nativeTokenWrapperAddress = getNativeTokenByChainId(
