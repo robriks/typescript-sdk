@@ -2233,6 +2233,12 @@ export const MintRequest721: {
     type: string;
 }[];
 
+// @public (undocumented)
+export const MintRequest721withQuantity: {
+    name: string;
+    type: string;
+}[];
+
 // Warning: (ae-internal-missing-underscore) The name "MissingOwnerRoleError" should be prefixed with an underscore because the declaration is marked as @internal
 //
 // @internal (undocumented)
@@ -2926,6 +2932,11 @@ export type PayloadWithUri20 = z.output<typeof Signature20PayloadOutput>;
 //
 // @public (undocumented)
 export type PayloadWithUri721 = z.output<typeof Signature721PayloadOutput>;
+
+// Warning: (ae-incompatible-release-tags) The symbol "PayloadWithUri721withQuantity" is marked as @public, but its signature references "Signature1155PayloadOutput" which is marked as @internal
+//
+// @public (undocumented)
+export type PayloadWithUri721withQuantity = z.output<typeof Signature1155PayloadOutput>;
 
 // @public
 export type PermitRequestMessage = {
@@ -3925,6 +3936,12 @@ export type SignedPayload20 = {
 // @public (undocumented)
 export type SignedPayload721 = {
     payload: PayloadWithUri721;
+    signature: string;
+};
+
+// @public (undocumented)
+export type SignedPayload721WithQuantitySignature = {
+    payload: PayloadWithUri721withQuantity;
     signature: string;
 };
 
